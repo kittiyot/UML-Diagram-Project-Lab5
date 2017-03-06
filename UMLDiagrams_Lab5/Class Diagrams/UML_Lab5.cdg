@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UML_Lab5">
+  <ClassDiagramComponents>
+    <Interface name="Image" package="Org.sskru.domain" visibility="public" xPosition="218.0" yPosition="149.0">
+      <Methods>
+        <Method name="display" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Realimage" package="Org.sskru.domain" visibility="public" xPosition="87.0" yPosition="337.0">
+      <Fields>
+        <Field name="fileName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Realimage" returnType="void" visibility="public"/>
+        <Method name="display" returnType="void" visibility="public"/>
+        <Method name="loadFromDisk" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProxyImage" package="Org.sskru.domain" visibility="public" xPosition="335.0" yPosition="337.0">
+      <Fields>
+        <Field name="realimage" type="Realimage" visibility="private"/>
+        <Field name="fileName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="ProxyImage" returnType="void" visibility="public"/>
+        <Method name="display" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProxyPatternDemo" package="Org.sskru.domain" visibility="public" xPosition="620.0" yPosition="365.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Org.sskru.domain.Realimage" target="Org.sskru.domain.Image"/>
+    <IsRelation name="asks" source="Org.sskru.domain.ProxyPatternDemo" target="Org.sskru.domain.ProxyImage"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Org.sskru.domain.ProxyImage" target="Org.sskru.domain.Image"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
